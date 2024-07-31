@@ -24,9 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         filtro.addEventListener('click', () => {
             const filter = filtro.getAttribute('data-filter');
 
-            filtros.forEach(btn => btn.classList.remove('active'));
-            filtro.classList.add('active');
-
             carrosseis.forEach(carrossel => {
                 if (carrossel.classList.contains(filter) || filter === 'all') {
                     carrossel.classList.add('active');
