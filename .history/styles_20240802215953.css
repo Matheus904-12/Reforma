@@ -567,10 +567,10 @@ body {
 footer {
   background-color: #2a2a2a;
   position: relative; /* Torna o footer fixo */
-  bottom: 25px; /* Adiciona uma margem do fundo da página */
+  bottom: 30px; /* Adiciona uma margem do fundo da página */
   left: 50%; /* Centraliza horizontalmente */
   transform: translateX(-50%); /* Centraliza horizontalmente */
-  width: 97%; /* Ajusta a largura do footer */
+  width: 95%; /* Ajusta a largura do footer */
   height: auto; /* Ajusta a altura do footer */
   padding: 1rem; /* Ajusta o padding do footer */
   border-radius: 15px; /* Aplica border-radius nos quatro cantos */

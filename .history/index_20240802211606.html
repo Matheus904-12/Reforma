@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automobil - Venda de Veículos</title>
     <link rel="stylesheet" href="styles.css">
-    <!----- FONT AWESOME CSS FOR ICONS FONTS ------>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
@@ -168,69 +166,66 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col" id="company">
-                    <img src="imagens/logo.png" alt="" class="logo">
-                    <p>
-                        Especializados na venda de veículos com rodas: carros, caminhões, patinetes, motos, skates, carrinhos de bebê e muito mais. 
-                        Encontre o veículo perfeito para suas necessidades!
-                    </p>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="newsletter">
+                <p>Assine a nossa newsletter</p>
+                <form action="#">
+                    <input type="email" placeholder="Email ...">
+                    <button type="submit">➔</button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <div class="top-cities">
+                    <h4>Principais Cidades</h4>
+                    <ul>
+                        <li>São Paulo</li>
+                        <li>Rio de Janeiro</li>
+                        <li>Belo Horizonte</li>
+                        <li>Curitiba</li>
+                        <li>Porto Alegre</li>
+                    </ul>
                 </div>
-        
-                <div class="col" id="services">
-                    <h3>Serviços</h3>
-                    <div class="links">
-                        <a href="#">Manutenção de Veículos</a>
-                        <a href="#">Consultoria na Compra</a>
-                        <a href="#">reparos Especializados</a>
-                        <a href="#">Venda de Peças e Acessórios</a>
-                    </div>
+                <div class="explore">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li>Venda de Veículos</li>
+                        <li>Manutenção</li>
+                        <li>Reparos</li>
+                        <li>Consultoria</li>
+                        <li>Peças e Acessórios</li>
+                    </ul>
                 </div>
-        
-                <div class="col" id="useful-links">
-                    <h3>Links Úteis</h3>
-                    <div class="links">
-                        <a href="#">Sobre Nós</a>
-                        <a href="#">Nossos Serviços</a>
-                        <a href="#">Política de Privacidade</a>
-                        <a href="#">Ajuda</a>
-                    </div>
-                </div>
-        
-                <div class="col" id="contact">
-                    <h3>Contato</h3>
-                    <div class="contact-details">
-                        <i class="fa fa-location"></i>
-                        <p>Rua das Rodas, 123, <br> São Paulo, Brasil</p>
-                    </div>
-                    <div class="contact-details">
-                        <i class="fa fa-phone"></i>
-                        <p>+55-11-98765-4321</p>
-                    </div>
+                <div class="intercity-rides">
+                    <h4>Principais Roteiros</h4>
+                    <ul>
+                        <li>São Paulo - Rio de Janeiro</li>
+                        <li>Rio de Janeiro - Belo Horizonte</li>
+                        <li>São Paulo - Curitiba</li>
+                        <li>Porto Alegre - Florianópolis</li>
+                        <li>Recife - Salvador</li>
+                    </ul>
                 </div>
             </div>
-        
-            <div class="row">
-                <div class="form">
-                    <form action="">
-                        <input type="text" placeholder="Digite seu email...">
-                        <button><i class="fa fa-paper-plane"></i></button>
-                    </form>
+            <div class="footer-bottom">
+                <p>© 2023 Automobil</p>
+                <ul>
+                    <li><a href="#">Termos</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#">Acessibilidade</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><img src="imagens/youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="imagens/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="imagens/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="imagens/instagram-icon.png" alt="Instagram"></a>
                 </div>
             </div>
         </div>
-        
+    </footer>
 
-     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Remove a tela de carregamento após o carregamento da página
@@ -238,7 +233,7 @@
             loadingScreen.classList.add("loaded");
 
             // Animação de surgimento para todos os elementos
-            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article, .container, .row, .social, .footer, .links,", {
+            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article", {
                 duration: 1.2,
                 opacity: 0,
                 y: 50,

@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automobil - Venda de Veículos</title>
     <link rel="stylesheet" href="styles.css">
-    <!----- FONT AWESOME CSS FOR ICONS FONTS ------>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
@@ -143,18 +141,18 @@
     <section class="servicos">
         <div class="produtos-header">
             <h2>Garantia & Qualidade</h2>
-            <p class="description">Nossa garantia e qualidade são inigualáveis. Confira alguns de nossos produtos mais recomendados por clientes satisfeitos.</p>
+            <p class="description">Nossa garantia e qualidade são inigualáveis. Confira alguns de nossos veículos mais recomendados por clientes satisfeitos.</p>
         </div>
         <div class="garantia-cards">
             <div class="garantia-card">
                 <img src="imagens/Rectangle 19.png" alt="Veículo 1" class="garantia-card-image">
                 <h3>Qualidade Certificada</h3>
-                <p>Todos os nossos produtos com rodas passam por rigorosos testes de qualidade para garantir que atendam aos mais altos padrões de desempenho e segurança.</p>
+                <p>Todos os nossos veículos passam por rigorosos testes de qualidade para garantir que atendam aos mais altos padrões de desempenho e segurança.</p>
             </div>
             <div class="garantia-card">
                 <img src="imagens/Rectangle 19.png" alt="Veículo 2" class="garantia-card-image">
                 <h3>Garantia de Satisfação</h3>
-                <p>Oferecemos garantia completa em todos os nossos produtos, assegurando que você fique completamente satisfeito com sua compra.</p>
+                <p>Oferecemos garantia completa em todos os nossos veículos, assegurando que você fique completamente satisfeito com sua compra.</p>
             </div>
             <div class="garantia-card">
                 <img src="imagens/Rectangle 19.png" alt="Veículo 3" class="garantia-card-image">
@@ -168,69 +166,7 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col" id="company">
-                    <img src="imagens/logo.png" alt="" class="logo">
-                    <p>
-                        Especializados na venda de veículos com rodas: carros, caminhões, patinetes, motos, skates, carrinhos de bebê e muito mais. 
-                        Encontre o veículo perfeito para suas necessidades!
-                    </p>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-        
-                <div class="col" id="services">
-                    <h3>Serviços</h3>
-                    <div class="links">
-                        <a href="#">Manutenção de Veículos</a>
-                        <a href="#">Consultoria na Compra</a>
-                        <a href="#">reparos Especializados</a>
-                        <a href="#">Venda de Peças e Acessórios</a>
-                    </div>
-                </div>
-        
-                <div class="col" id="useful-links">
-                    <h3>Links Úteis</h3>
-                    <div class="links">
-                        <a href="#">Sobre Nós</a>
-                        <a href="#">Nossos Serviços</a>
-                        <a href="#">Política de Privacidade</a>
-                        <a href="#">Ajuda</a>
-                    </div>
-                </div>
-        
-                <div class="col" id="contact">
-                    <h3>Contato</h3>
-                    <div class="contact-details">
-                        <i class="fa fa-location"></i>
-                        <p>Rua das Rodas, 123, <br> São Paulo, Brasil</p>
-                    </div>
-                    <div class="contact-details">
-                        <i class="fa fa-phone"></i>
-                        <p>+55-11-98765-4321</p>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="row">
-                <div class="form">
-                    <form action="">
-                        <input type="text" placeholder="Digite seu email...">
-                        <button><i class="fa fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        
-
-     </footer>
+    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Remove a tela de carregamento após o carregamento da página
@@ -238,7 +174,7 @@
             loadingScreen.classList.add("loaded");
 
             // Animação de surgimento para todos os elementos
-            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article, .container, .row, .social, .footer, .links,", {
+            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article", {
                 duration: 1.2,
                 opacity: 0,
                 y: 50,
