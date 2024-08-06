@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chance Veículos - Venda de Veículos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles3.css">
+    <!----- FONT AWESOME CSS FOR ICONS FONTS ------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="imagens/dark.png" alt="Logo da Loja">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="finan.html">Financiamento</a>
+                <a href="veicu.html">Veículos</a>
+            </nav>
+            <button class="btn">
+                <span class="btn-text-one">Entrar</span>
+                <span class="btn-text-two">Vamos Lá!</span>
+            </button>
+        </div>
+    </header>
+    <br><br><br><br><br>
+    <div class="login-container">
+        <div class="login-left">
+            <div class="testimonial-wrapper">
+                <div class="testimonial-slide">
+                    <div class="testimonial">
+                        <p>"Ótimo atendimento e veículos de qualidade!"</p>
+                        <span>João Silva</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Amei meu novo carro, muito obrigado Chance Veículos!"</p>
+                        <span>Maria Oliveira</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Comprei um carro antigo e estou muito satisfeito."</p>
+                        <span>Carlos Souza</span>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial">
+                        <p>"Serviço de financiamento rápido e eficiente. Recomendo!"</p>
+                        <span>Lucas Pereira</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Equipe muito atenciosa e prestativa. Excelente experiência de compra."</p>
+                        <span>Ana Costa</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Encontrei exatamente o que procurava. Carros em ótimo estado!"</p>
+                        <span>Felipe Mendes</span>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial">
+                        <p>"Fui bem atendido do início ao fim. Super satisfeito com meu novo veículo."</p>
+                        <span>Juliana Santos</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Variedade incrível de carros e preços justos. Recomendo a todos."</p>
+                        <span>Renato Almeida</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"A equipe de consultoria ajudou muito na escolha do meu carro. Ótima compra!"</p>
+                        <span>Claudia Rodrigues</span>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial">
+                        <p>"Agradeço pela paciência e atenção durante todo o processo de compra."</p>
+                        <span>Gustavo Lima</span>
+                    </div>
+                    <!-- Adicione mais avaliações conforme necessário -->
+                </div>
+            </div>
+        </div>
+        <div class="login-right">
+            <div class="form-container">
+                <h2 class="form-title">Login</h2>
+                <div class="login-toggle">
+                    <button class="toggle-btn active" id="login-btn">Login</button>
+                    <button class="toggle-btn" id="register-btn">Cadastro</button>
+                </div>
+                <form id="login-form">
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+                    <button type="submit" class="form-btn">Entrar</button>
+                </form>
+                <form id="register-form" style="display: none;">
+                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Localização">
+                    <input type="email" placeholder="E-mail">
+                    <input type="tel" placeholder="Telefone">
+                    <input type="password" placeholder="Senha">
+                    <button type="submit" class="form-btn">Registrar</button>
+                </form>
+                <div class="login-footer">
+                    <p>Esqueceu a senha? <a href="#">Recuperar</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="company">
+                    <img src="imagens/white.png" alt="" class="logo">
+                    <p>
+                        Especializados na venda de carros seminovos, antigos e novos. 
+                        Encontre o carro perfeito para suas necessidades e estilo de vida!
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/p/CHANCE-VE%C3%8DCULOS-100063739276669/?paipv=0&eav=Afbw-6EMG8x-VpNtWfZloGlREGmYw3G0Q8PvLR--bdwjk5A0xtV1WnDa43PW5FFd-jU&_rdr"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.olx.com.br/perfil/wilson-chance-veiculos-d5494ec5"><i class="fab fa-instagram"></i></a>
+                        <a href="https://web.whatsapp.com/send?l=pt_BR&phone=5516%20997220455"><i class="fab fa-whatsapp"></i></a>
+                        <a href="(16)-3961-1899"><i class="fa fa-store"></i></a>
+                    </div>
+                </div>
+        
+                <div class="col" id="services">
+                    <h3>Serviços</h3>
+                    <div class="links">
+                        <a href="#">Manutenção de Veículos</a>
+                        <a href="#">Consultoria na Compra</a>
+                        <a href="#">Reparos Especializados</a>
+                        <a href="#">Venda de Peças e Acessórios</a>
+                    </div>
+                </div>
+        
+                <div class="col" id="useful-links">
+                    <h3>Links Úteis</h3>
+                    <div class="links">
+                        <a href="#">Sobre Nós</a>
+                        <a href="#">Nossos Serviços</a>
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Ajuda</a>
+                    </div>
+                </div>
+        
+                <div class="col" id="contact">
+                    <h3>Contato</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <p>Rua Silveira Martins, 918<br> Ribeirão Preto - SP, Brasil</p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p>+55-16-99722-0455</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="Digite seu email...">
+                        <button><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loadingScreen = document.getElementById("loading-screen");
+            loadingScreen.classList.add("loaded");
+
+            gsap.from(".navbar, .logo, .nav-links a, .btn, .testimonial, .form-container, .footer, .links, .social, .form", {
+                duration: 1.2,
+                opacity: 0,
+                y: 50,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+
+            const loginBtn = document.getElementById('login-btn');
+            const registerBtn = document.getElementById('register-btn');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const formTitle = document.querySelector('.form-title');
+
+            loginBtn.addEventListener('click', () => {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+                loginBtn.classList.add('active');
+                registerBtn.classList.remove('active');
+                formTitle.textContent = 'Login';
+            });
+
+            registerBtn.addEventListener('click', () => {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+                loginBtn.classList.remove('active');
+                registerBtn.classList.add('active');
+                formTitle.textContent = 'Cadastro';
+            });
+
+            let slides = gsap.utils.toArray(".testimonial-slide");
+            let tl = gsap.timeline({ repeat: -1, defaults: { duration: 1, ease: "power2.inOut" } });
+
+            slides.forEach((slide, i) => {
+                tl.to(slide, { opacity: 1, duration: 3, onStart: () => slide.style.display = "block" })
+                  .to(slide, { opacity: 0, duration: 1, delay: 2, onComplete: () => slide.style.display = "none" });
+            });
+        });
+
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chance Veículos - Venda de Veículos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles3.css">
+    <!-- FONT AWESOME CSS FOR ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        .social-login-buttons {
+            display: flex; /* Alinha os botões horizontalmente */
+            justify-content: center; /* Centraliza os botões */
+            gap: 10px; /* Espaço entre os botões */
+            margin-top: 20px; /* Margem superior */
+        }
+
+        .social-login-buttons button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5em;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-login-buttons button:hover {
+            opacity: 0.8;
+        }
+
+        .google-btn {
+            background-color: #db4437;
+        }
+
+        .facebook-btn {
+            background-color: #3b5998;
+        }
+
+        .email-btn {
+            background-color: #4285f4;
+        }
+
+        .social-login-buttons i {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing content here -->
+
+    <div class="login-container">
+        <div class="login-right">
+            <div class="form-container">
+                <h2 class="form-title">Login</h2>
+                <div class="login-toggle">
+                    <button class="toggle-btn active" id="login-btn">Login</button>
+                    <button class="toggle-btn" id="register-btn">Cadastro</button>
+                </div>
+                <form id="login-form" class="visible">
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+                    <button type="submit" class="form-btn">Entrar</button>
+                </form>
+                <form id="register-form" class="hidden">
+                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Localização">
+                    <input type="email" placeholder="E-mail">
+                    <input type="tel" placeholder="Telefone">
+                    <input type="password" placeholder="Senha">
+                    <button type="submit" class="form-btn">Registrar</button>
+                </form>
+
+                <!-- Social Login Buttons -->
+                <div class="social-login-buttons">
+                    <button class="google-btn">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button class="facebook-btn">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button class="email-btn">
+                        <i class="fa fa-envelope"></i>
+                    </button>
+                </div>
+
+                <div class="login-footer">
+                    <p>Esqueceu a senha? <a href="#">Recuperar</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your existing footer and scripts here -->
+</body>
+</html>

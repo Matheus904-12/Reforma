@@ -229,8 +229,8 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <script>
+     </footer>
+     <script>
         window.addEventListener('DOMContentLoaded', function() {
             var loadingScreen = document.getElementById('loading-screen');
             setTimeout(function() {
@@ -238,7 +238,7 @@
                 setTimeout(function() {
                     loadingScreen.style.display = 'none';
                 }, 500);
-            }, 1000);
+            }, 4000);
         });
 
         window.addEventListener('scroll', function() {
@@ -258,28 +258,10 @@
 
             var tl = gsap.timeline();
             tl.fromTo(".navbar", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
-            .fromTo(".logo img", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 1 }, "<")
-            .fromTo(".nav-links a", { opacity: 0, y: -20 }, { opacity: 1, y: 0, stagger: 0.1, duration: 1 }, "<")
-            .fromTo(".btn", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1 }, "<");
+              .fromTo(".logo img", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 1 }, "<")
+              .fromTo(".nav-links a", { opacity: 0, y: -20 }, { opacity: 1, y: 0, stagger: 0.1, duration: 1 }, "<")
+              .fromTo(".btn", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1 }, "<");
         });
-
-        document.addEventListener('DOMContentLoaded', function() {
-        // Verifique se a página existe
-        var currentPath = window.location.pathname;
-
-        // Lista de páginas válidas
-        var validPaths = [
-            '/index.html',
-            '/finan.html',
-            '/veicu.html',
-            '/login.html'
-        ];
-
-        // Se a página atual não estiver na lista de caminhos válidos e não for a própria página 404
-        if (!validPaths.includes(currentPath) && currentPath !== '/404.html') {
-            window.location.href = '/404.html';
-        }
-    });
     </script>
 </body>
 </html>

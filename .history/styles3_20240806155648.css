@@ -1,0 +1,218 @@
+/* Geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Wrapper da autenticação */
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f6f5f7;
+    position: relative;
+}
+
+/* Caixa de formulário de autenticação */
+.auth-form-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.auth-form-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-form-box span {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.auth-social-link {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    margin: 0 5px;
+    color: #757575;
+    text-decoration: none;
+}
+
+.auth-input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.auth-input-group input {
+    background: #f6f5f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.auth-input-group label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 14px;
+    color: #757575;
+    transition: 0.2s ease-in-out;
+}
+
+.auth-input-group input:focus + label,
+.auth-input-group input:valid + label {
+    top: -20px;
+    left: 5px;
+    font-size: 12px;
+    color: #1a73e8;
+}
+
+.auth-input-group input:focus,
+.auth-input-group input:valid {
+    border-color: #1a73e8;
+}
+
+.auth-form-box button {
+    background: #1a73e8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-form-box button:hover {
+    background: #0f5bbf;
+}
+
+.forgot-password {
+    display: block;
+    color: #1a73e8;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.auth-overlay-box {
+    background: #ff4b2b;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.auth-overlay {
+    background: #ff4b2b;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    background-size: cover;
+    height: 100%;
+    width: 200%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.auth-overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    top: 0;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.auth-overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.auth-overlay-left {
+    transform: translateX(-20%);
+}
+
+.auth-overlay-box #auth-overlay-btn {
+    display: none;
+}
+
+.auth-overlay-box button {
+    border: 1px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+    font-size: 14px;
+    padding: 12px 45px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.auth-overlay-box button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.forgot-password {
+    color: #757575;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Seções de autenticação */
+.auth-wrapper .sign-in-section,
+.auth-wrapper .sign-up-section {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.auth-wrapper .sign-in-section {
+    left: 0;
+    transform: translateX(100%);
+}
+
+.auth-wrapper .sign-up-section {
+    right: 0;
+    transform: translateX(-100%);
+}

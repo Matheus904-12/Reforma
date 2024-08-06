@@ -1,0 +1,116 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-left, .login-right {
+    flex: 1;
+    padding: 40px;
+}
+
+.login-left {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.login-left h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.login-left p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.testimonial p {
+    margin: 0 0 10px 0;
+}
+
+.testimonial span {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.login-right h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.login-toggle {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 1em;
+}
+
+.toggle-btn.active {
+    background-color: #000;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select, .checkbox-container {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.create-account-btn {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.create-account-btn:hover {
+    background-color: #e65c00;
+}
+
+.login-footer {
+    margin-top: 20px;
+}
+
+.login-footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

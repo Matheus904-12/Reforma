@@ -229,57 +229,46 @@
                 </div>
             </div>
         </div>
-    </footer>
+     </footer>
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var loadingScreen = document.getElementById('loading-screen');
-            setTimeout(function() {
-                loadingScreen.style.opacity = '0';
-                setTimeout(function() {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }, 1000);
-        });
+        document.addEventListener("DOMContentLoaded", () => {
+            // Remove a tela de carregamento após o carregamento da página
+            const loadingScreen = document.getElementById("loading-screen");
+            loadingScreen.classList.add("loaded");
 
-        window.addEventListener('scroll', function() {
-            var navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        window.addEventListener('DOMContentLoaded', function() {
-            var loginBtn = document.getElementById('login-btn');
-            loginBtn.addEventListener('click', function() {
-                window.location.href = 'login.html';
+            // Animação de surgimento para todos os elementos
+            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article, .container, .row, .social, .footer, .links,", {
+                duration: 1.2,
+                opacity: 0,
+                y: 50,
+                stagger: 0.1,
+                ease: "power2.out"
             });
 
-            var tl = gsap.timeline();
-            tl.fromTo(".navbar", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
-            .fromTo(".logo img", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 1 }, "<")
-            .fromTo(".nav-links a", { opacity: 0, y: -20 }, { opacity: 1, y: 0, stagger: 0.1, duration: 1 }, "<")
-            .fromTo(".btn", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1 }, "<");
+            // Animação para elementos ao rolar a página
+            gsap.utils.toArray(".servicos, .produto, .garantia-qualidade").forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 30%",
+                        scrub: true
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1
+                });
+            });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-        // Verifique se a página existe
-        var currentPath = window.location.pathname;
-
-        // Lista de páginas válidas
-        var validPaths = [
-            '/index.html',
-            '/finan.html',
-            '/veicu.html',
-            '/login.html'
-        ];
-
-        // Se a página atual não estiver na lista de caminhos válidos e não for a própria página 404
-        if (!validPaths.includes(currentPath) && currentPath !== '/404.html') {
-            window.location.href = '/404.html';
-        }
-    });
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
     </script>
 </body>
 </html>

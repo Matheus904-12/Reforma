@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f6f5f7;
+}
+
+.auth-form-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    max-width: 100%;
+    min-height: 400px;
+}
+
+.auth-form-box form {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.auth-form-box h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 24px;
+}
+
+.auth-form-box span {
+    font-size: 12px;
+    color: #757575;
+    margin-bottom: 15px;
+}
+
+.auth-social-icons {
+    margin: 15px 0;
+}
+
+.auth-social-link {
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    margin: 0 5px;
+}
+
+.auth-input-group {
+    position: relative;
+    margin: 10px 0;
+}
+
+.auth-input-group input {
+    background: #f6f5f7;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.auth-input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transition: transform 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.auth-input-group input:focus + label,
+.auth-input-group input:valid + label {
+    transform: translateY(-18px) scale(0.75);
+    color: #1a73e8;
+}
+
+.auth-input-group input:focus,
+.auth-input-group input:valid {
+    border-bottom: 2px solid #1a73e8;
+}
+
+.auth-overlay-box {
+    background: #ff4b2b;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+
+.auth-overlay {
+    background: #ff4b2b;
+    background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.auth-overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.auth-overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.auth-overlay-left {
+    transform: translateX(-20%);
+}
+
+.auth-overlay-box #auth-overlay-btn {
+    display: none;
+}
+
+.auth-overlay-box button {
+    border: 1px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+    font-size: 12px;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.auth-overlay-box button:focus {
+    outline: none;
+}
+
+.forgot-password {
+    color: #757575;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.auth-wrapper .sign-in-section,
+.auth-wrapper .sign-up-section {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.6s ease-in-out;
+}
+
+.auth-wrapper .sign-in-section {
+    left: 0;
+    transform: translateX(100%);
+}
+
+.auth-wrapper .sign-up-section {
+    right: 0;
+    transform: translateX(-100%);
+}
