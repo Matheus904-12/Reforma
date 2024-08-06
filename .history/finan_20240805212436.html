@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chance Veículos - Venda de Veículos</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <!----- FONT AWESOME CSS FOR ICONS FONTS ------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -31,10 +32,73 @@
         </div>
     </header>
 
-
-
-
+    <section class="financiamento">
+        <h2>Envie os dados do seu veículo</h2>
+        <form id="financiamento-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="vehicle-photo">Foto do Veículo</label>
+                <input type="file" id="vehicle-photo" name="vehicle-photo" required>
+            </div>
     
+            <div class="form-group">
+                <label for="vehicle-model">Modelo do Veículo</label>
+                <input type="text" id="vehicle-model" name="vehicle-model" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="vehicle-year">Ano do Veículo</label>
+                <input type="number" id="vehicle-year" name="vehicle-year" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="vehicle-price">Preço</label>
+                <input type="number" id="vehicle-price" name="vehicle-price" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="vehicle-plate">Placa</label>
+                <input type="text" id="vehicle-plate" name="vehicle-plate" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="vehicle-location">Localização</label>
+                <input type="text" id="vehicle-location" name="vehicle-location" required>
+            </div>
+    
+            <h3>Dados Bancários</h3>
+            <div class="form-group">
+                <label for="seller-name">Nome do Vendedor/Comprador</label>
+                <input type="text" id="seller-name" name="seller-name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="seller-age">Idade</label>
+                <input type="number" id="seller-age" name="seller-age" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="seller-address">Endereço</label>
+                <input type="text" id="seller-address" name="seller-address" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="bank-name">Banco</label>
+                <input type="text" id="bank-name" name="bank-name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="bank-account">Número da Conta</label>
+                <input type="text" id="bank-account" name="bank-account" required>
+            </div>
+    
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+
+
+
+
     <footer>
         <div class="container">
             <div class="row">

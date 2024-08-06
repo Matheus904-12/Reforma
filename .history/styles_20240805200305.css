@@ -29,13 +29,14 @@ header {
 .logo {
     position: absolute;
     left: 50px;
+    font-size: 1.5em;
+    color: #333;
     font-weight: bold;
 }
 
 .logo img {
-  transform: scale(0.3); /* Reduz o tamanho para 80% */
+  transform: scale(0.5); /* Reduz o tamanho para 80% */
   transition: transform 0.3s ease-in-out;
-  margin-left: -220px;
 }
 
 .nav-links {

@@ -34,6 +34,7 @@
 
 
 
+
     
     <footer>
         <div class="container">
@@ -97,18 +98,20 @@
      </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Remove a tela de carregamento após o carregamento da página
-            const loadingScreen = document.getElementById("loading-screen");
-            loadingScreen.classList.add("loaded");
+    // Remove a tela de carregamento após o carregamento da página
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.classList.add("loaded");
 
-            // Animação de surgimento para todos os elementos
-            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article, .container, .row, .social, .footer, .links,", {
-                duration: 1.2,
-                opacity: 0,
-                y: 50,
-                stagger: 0.1,
-                ease: "power2.out"
-            });
+    // Animação de surgimento para todos os elementos da seção financiamento
+    gsap.from(".financiamento h2, .financiamento h3, .financiamento .form-group, .financiamento button", {
+        duration: 1.2,
+        opacity: 0,
+        y: 50,
+        stagger: 0.1,
+        ease: "power2.out"
+    });
+});
+
 
             // Animação para elementos ao rolar a página
             gsap.utils.toArray(".servicos, .produto, .garantia-qualidade").forEach(section => {
