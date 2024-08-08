@@ -1,0 +1,60 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('multiStepForm');
+    const formSteps = Array.from(form.querySelectorAll('.form-step'));
+    const nextButtons = form.querySelectorAll('.next-step');
+    const prevButtons = form.querySelectorAll('.prev-step');
+    let currentStep = 0;
+
+    formSteps[currentStep].classList.add('active');
+
+    nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentStep < formSteps.length - 1) {
+                formSteps[currentStep].classList.remove('active');
+                currentStep++;
+                formSteps[currentStep].classList.add('active');
+                updateReview();
+            }
+        });
+    });
+
+    prevButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentStep > 0) {
+                formSteps[currentStep].classList.remove('active');
+                currentStep--;
+                formSteps[currentStep].classList.add('active');
+            }
+        });
+    });
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Formulário enviado com sucesso!');
+        // Aqui você pode adicionar o código para enviar os dados do formulário para o servidor
+    });
+
+    function updateReview() {
+        if (currentStep === formSteps.length - 1) {
+            const reviewInfo = form.querySelector('.review-info');
+            reviewInfo.innerHTML = `
+                <h3>Informações Pessoais</h3>
+                <p><strong>Nome:</strong> ${form.firstName.value}</p>
+                <p><strong>Sobrenome:</strong> ${form.lastName.value}</p>
+                <p><strong>Email:</strong> ${form.email.value}</p>
+                <p><strong>Telefone:</strong> ${form.phone.value}</p>
+                
+                <h3>Informações do Veículo</h3>
+                <p><strong>Marca:</strong> ${form.make.value}</p>
+                <p><strong>Modelo:</strong> ${form.model.value}</p>
+                <p><strong>Ano:</strong> ${form.year.value}</p>
+                <p><strong>Preço:</strong> R$${form.price.value}</p>
+                
+                <h3>Informações de Financiamento</h3>
+                <p><strong>Entrada:</strong> R$${form.downPayment.value}</p>
+                <p><strong>Prazo do Empréstimo:</strong> ${form.loanTerm.value} meses</p>
+                <p><strong>Taxa de Juros:</strong> ${form.interestRate.value}%</p>
+            `;
+        }
+    }
+});

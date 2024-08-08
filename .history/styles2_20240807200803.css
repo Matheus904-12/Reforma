@@ -1,0 +1,214 @@
+::selection {
+    color: #fff;
+    background: var(--primary);
+}
+.custom-container {    
+    width: var(--containerWidth);
+    background: #fff;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 5px 15px;
+}
+.custom-container header {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+.custom-container .custom-form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+.custom-container .custom-form-outer form {
+    display: flex;
+    width: calc(100% * var(--stepNumber));
+}
+.custom-form-outer form .custom-page {
+    width: calc(100% / var(--stepNumber));
+    transition: margin-left 0.3s ease-in-out;
+}
+.custom-form-outer form .custom-page .custom-title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+.custom-form-outer form .custom-page .custom-field {
+    width: var(--containerWidth);
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+form .custom-page .custom-field .custom-label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+form .custom-page .custom-field input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--inputBorderColor);
+    border-radius: 5px;
+    padding-left: 15px;
+    margin: 0 1px;
+    font-size: 18px;
+    transition: border-color 150ms ease;
+}
+form .custom-page .custom-field input.invalid-input {
+    border-color: var(--errorColor);
+}
+form .custom-page .custom-field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+form .custom-page .custom-field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--secondary);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+form .custom-page .custom-field button:hover {
+    background: #000;
+}
+form .custom-page .custom-btns button {
+    margin-top: -20px !important;
+}
+form .custom-page .custom-btns button.custom-prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+form .custom-page .custom-btns button.custom-next {
+    margin-left: 3px;
+}
+.custom-container .custom-progress-bar {
+    display: flex;
+    margin: 40px 0;
+    user-select: none;
+}
+.custom-container .custom-progress-bar .custom-step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.custom-container .custom-progress-bar .custom-step p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+}
+.custom-progress-bar .custom-step .custom-bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+.custom-progress-bar .custom-step .custom-bullet.active {
+    border-color: var(--primary);
+    background: var(--primary);
+}
+.custom-progress-bar .custom-step .custom-bullet span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.custom-progress-bar .custom-step .custom-bullet.active span {
+    display: none;
+}
+.custom-progress-bar .custom-step .custom-bullet:before,
+.custom-progress-bar .custom-step .custom-bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: #262626;
+}
+.custom-progress-bar .custom-step .custom-bullet.active:after {
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+.custom-progress-bar .custom-step:last-child .custom-bullet:before,
+.custom-progress-bar .custom-step:last-child .custom-bullet:after {
+    display: none;
+}
+.custom-progress-bar .custom-step p.active {
+    color: var(--primary);
+    transition: 0.2s linear;
+}
+.custom-progress-bar .custom-step .custom-check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.custom-progress-bar .custom-step .custom-check.active {
+    display: block;
+    color: #fff;
+}
+
+@media screen and (max-width: 660px) {
+    :root {
+        --containerWidth: 400px;
+    }
+    .custom-progress-bar .custom-step p {
+        display: none;
+    }
+    .custom-progress-bar .custom-step .custom-bullet::after,
+    .custom-progress-bar .custom-step .custom-bullet::before {
+        display: none;
+    }
+    .custom-progress-bar .custom-step .custom-bullet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .custom-progress-bar .custom-step .custom-check {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-size: 15px;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+    .custom-step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 490px) {
+    :root {
+        --containerWidth: 100%;
+    }
+    .custom-container {
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+}

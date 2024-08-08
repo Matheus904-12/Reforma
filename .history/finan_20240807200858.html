@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chance Veículos - Venda de Veículos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    
+    <!-- FONT AWESOME CSS FOR ICONS FONTS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="imagens/dark.png" alt="Logo da Loja">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="finan.html">Financiamento</a>
+                <a href="veicu.html">Veículos</a>
+            </nav>
+            <button class="btn">
+                <span class="btn-text-one">Entrar</span>
+                <span class="btn-text-two">Vamos Lá!</span>
+            </button>
+        </div>
+    </header>
+<br><br>
+<div class="custom-container">
+    <header>Multi-Step<br> Registration Form</header>
+    <div class="custom-progress-bar">
+        <div class="custom-step">
+            <p>Name</p>
+            <div class="custom-bullet">
+                <span>1</span>
+            </div>
+            <div class="custom-check fas fa-check"></div>
+        </div>
+        <div class="custom-step">
+            <p>Contact</p>
+            <div class="custom-bullet">
+                <span>2</span>
+            </div>
+            <div class="custom-check fas fa-check"></div>
+        </div>
+        <div class="custom-step">
+            <p>Birth</p>
+            <div class="custom-bullet">
+                <span>3</span>
+            </div>
+            <div class="custom-check fas fa-check"></div>
+        </div>
+        <div class="custom-step">
+            <p>Address</p>
+            <div class="custom-bullet">
+                <span>4</span>
+            </div>
+            <div class="custom-check fas fa-check"></div>
+        </div>
+        <div class="custom-step">
+            <p>Social</p>
+            <div class="custom-bullet">
+                <span>5</span>
+            </div>
+            <div class="custom-check fas fa-check"></div>
+        </div>
+        <div class="custom-step">
+            <p>Account</p>
+            <div class="custom-bullet">
+                <span>6</span>
+            </div>
+            <div class="custom-check fas fa-check"></div>
+        </div>
+    </div>
+    <div class="custom-form-outer">
+        <form action="#">
+            <div class="custom-page slide-page">
+                <div class="custom-title">Name:</div>
+                <div class="custom-field">
+                    <div class="custom-label">First Name</div>
+                    <input type="text" required />
+                </div>
+                <div class="custom-field">
+                    <div class="custom-label">Last Name</div>
+                    <input type="text" required />
+                </div>
+                <div class="custom-field">
+                    <button class="firstNext custom-next">Next</button>
+                </div>
+            </div>
+
+            <div class="custom-page">
+                <div class="custom-title">Contact:</div>
+                <div class="custom-field">
+                    <div class="custom-label">Email Address</div>
+                    <input type="text" required />
+                </div>
+                <div class="custom-field">
+                    <div class="custom-label">Phone Number</div>
+                    <input type="Number" required />
+                </div>
+                <div class="custom-field custom-btns">
+                    <button class="prev-1 custom-prev">Previous</button>
+                    <button class="next-1 custom-next">Next</button>
+                </div>
+            </div>
+            <div class="custom-page">
+                <div class="custom-title">Birth:</div>
+                <div class="custom-field">
+                    <div class="custom-label">Birthdate</div>
+                    <input type="date" required />
+                </div>
+                <div class="custom-field">
+                    <div class="custom-label">Gender</div>
+                    <select required>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="custom-field custom-btns">
+                    <button class="prev-2 custom-prev">Previous</button>
+                    <button class="next-2 custom-next">Next</button>
+                </div>
+            </div>
+            <div class="custom-page">
+                <div class="custom-title">Address:</div>
+                <div class="custom-field">
+                    <div class="custom-label">Complete Address</div>
+                    <input type="text" required />
+                </div>
+                <div class="custom-field">
+                    <div class="custom-label">Zip Code</div>
+                    <input type="Number" required />
+                </div>
+                <div class="custom-field custom-btns">
+                    <button class="prev-3 custom-prev">Previous</button>
+                    <button class="next-3 custom-next">Next</button>
+                </div>
+            </div>
+
+            <div class="custom-page">
+                <div class="custom-title">Social Media:</div>
+                <div class="custom-field">
+                    <div class="custom-label">Facebook Link</div>
+                    <input type="text" required />
+                </div>
+                <div class="custom-field">
+                    <div class="custom-label">LinkedIn Link</div>
+                    <input type="text" required />
+                </div>
+                <div class="custom-field custom-btns">
+                    <button class="prev-4 custom-prev">Previous</button>
+                    <button class="next-4 custom-next">Next</button>
+                </div>
+            </div>
+
+            <div class="custom-page">
+                <div class="custom-title">Login Details:</div>
+                <div class="custom-field">
+                    <div class="custom-label">Username</div>
+                    <input type="text" required />
+                </div>
+                <div class="custom-field">
+                    <div class="custom-label">Password</div>
+                    <input type="password" required />
+                </div>
+                <div class="custom-field custom-btns">
+                    <button class="prev-5 custom-prev">Previous</button>
+                    <button class="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="company">
+                    <img src="imagens/white.png" alt="" class="logo">
+                    <p>
+                        Especializados na venda de carros seminovos, antigos e novos. 
+                        Encontre o carro perfeito para suas necessidades e estilo de vida!
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/p/CHANCE-VE%C3%8DCULOS-100063739276669/?paipv=0&eav=Afbw-6EMG8x-VpNtWfZloGlREGmYw3G0Q8PvLR--bdwjk5A0xtV1WnDa43PW5FFd-jU&_rdr"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.olx.com.br/perfil/wilson-chance-veiculos-d5494ec5"><i class="fab fa-instagram"></i></a>
+                        <a href="https://web.whatsapp.com/send?l=pt_BR&phone=5516%20997220455"><i class="fab fa-whatsapp"></i></a>
+                        <a href="(16)-3961-1899"><i class="fa fa-store"></i></a>
+                    </div>
+                </div>
+        
+                <div class="col" id="services">
+                    <h3>Serviços</h3>
+                    <div class="links">
+                        <a href="#">Manutenção de Veículos</a>
+                        <a href="#">Consultoria na Compra</a>
+                        <a href="#">Reparos Especializados</a>
+                        <a href="#">Venda de Peças e Acessórios</a>
+                    </div>
+                </div>
+        
+                <div class="col" id="useful-links">
+                    <h3>Links Úteis</h3>
+                    <div class="links">
+                        <a href="#">Sobre Nós</a>
+                        <a href="#">Nossos Serviços</a>
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Ajuda</a>
+                    </div>
+                </div>
+        
+                <div class="col" id="contact">
+                    <h3>Contato</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <p>Rua Silveira Martins, 918<br> Ribeirão Preto - SP, Brasil</p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p>+55-16-99722-0455</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="Digite seu email...">
+                        <button><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </footer>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Remove a tela de carregamento após o carregamento da página
+            const loadingScreen = document.getElementById("loading-screen");
+            loadingScreen.classList.add("loaded");
+
+            // Animação de surgimento para todos os elementos
+            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article, .container, .row, .social, .footer, .links,", {
+                duration: 1.2,
+                opacity: 0,
+                y: 50,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+
+            // Animação para elementos ao rolar a página
+            gsap.utils.toArray(".servicos, .produto, .garantia-qualidade").forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 30%",
+                        scrub: true
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1
+                });
+            });
+        });
+
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+initMultiStepForm();
+
+function initMultiStepForm() {
+    const progressNumber = document.querySelectorAll(".step").length;
+    const slidePage = document.querySelector(".slide-page");
+    const submitBtn = document.querySelector(".submit");
+    const progressText = document.querySelectorAll(".step p");
+    const progressCheck = document.querySelectorAll(".step .check");
+    const bullet = document.querySelectorAll(".step .bullet");
+    const pages = document.querySelectorAll(".page");
+    const nextButtons = document.querySelectorAll(".next");
+    const prevButtons = document.querySelectorAll(".prev");
+    const stepsNumber = pages.length;
+
+    if (progressNumber !== stepsNumber) {
+        console.warn(
+            "Error, number of steps in progress bar do not match number of pages"
+        );
+    }
+
+    document.documentElement.style.setProperty("--stepNumber", stepsNumber);
+
+    let current = 1;
+
+    for (let i = 0; i < nextButtons.length; i++) {
+        nextButtons[i].addEventListener("click", function (event) {
+            event.preventDefault();
+
+            inputsValid = validateInputs(this);
+            // inputsValid = true;
+
+            if (inputsValid) {
+                slidePage.style.marginLeft = `-${
+                    (100 / stepsNumber) * current
+                }%`;
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
+            }
+        });
+    }
+
+    for (let i = 0; i < prevButtons.length; i++) {
+        prevButtons[i].addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = `-${
+                (100 / stepsNumber) * (current - 2)
+            }%`;
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
+        });
+    }
+    submitBtn.addEventListener("click", function () {
+        bullet[current - 1].classList.add("active");
+        progressCheck[current - 1].classList.add("active");
+        progressText[current - 1].classList.add("active");
+        current += 1;
+        setTimeout(function () {
+            alert("Your Form Successfully Signed up");
+            location.reload();
+        }, 800);
+    });
+
+    function validateInputs(ths) {
+        let inputsValid = true;
+
+        const inputs =
+            ths.parentElement.parentElement.querySelectorAll("input");
+        for (let i = 0; i < inputs.length; i++) {
+            const valid = inputs[i].checkValidity();
+            if (!valid) {
+                inputsValid = false;
+                inputs[i].classList.add("invalid-input");
+            } else {
+                inputs[i].classList.remove("invalid-input");
+            }
+        }
+        return inputsValid;
+    }
+}
+
+
+    </script>
+</body>
+</html>

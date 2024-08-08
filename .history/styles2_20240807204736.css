@@ -1,0 +1,119 @@
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.step p {
+    margin-bottom: 10px;
+}
+
+.bullet {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.bullet span {
+    font-size: 16px;
+}
+
+.check {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.step p,
+.bullet,
+.check {
+    transition: all 0.4s;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-outer form {
+    display: flex;
+    width: 600%;
+}
+
+.form-outer form .page {
+    width: 16.66%;
+    transition: margin-left 0.4s;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field .label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.field button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.field button:hover {
+    background-color: #555;
+}
+
+.field.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field.btns button {
+    width: 48%;
+}

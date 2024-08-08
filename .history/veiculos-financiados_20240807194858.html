@@ -1,19 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chance Veículos - Venda de Veículos</title>
+    <title>Veículos Financiados</title>
     <link rel="stylesheet" href="styles.css">
-    <!----- FONT AWESOME CSS FOR ICONS FONTS ------>
+    <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="loader"></div>
-    </div>
-    
     <header>
         <div class="navbar">
             <div class="logo">
@@ -24,17 +21,30 @@
                 <a href="finan.html">Financiamento</a>
                 <a href="veicu.html">Veículos</a>
             </nav>
-            <button class="btn" id="login-btn">
+            <button class="btn">
                 <span class="btn-text-one">Entrar</span>
                 <span class="btn-text-two">Vamos Lá!</span>
             </button>
         </div>
     </header>
-
-
-
-
-    
+    <main>
+        <div class="container">
+            <h1>Veículos Financiados</h1>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="path/to/car-image.jpg" alt="Car Image">
+                    <div class="card-content">
+                        <h3>Nome do Veículo</h3>
+                        <p>Ano: 2020</p>
+                        <p>Motor: 2.0</p>
+                        <p class="price">R$ 50,000</p>
+                    </div>
+                </div>
+                <!-- Mais cards aqui -->
+            </div>
+        </div>
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <div class="container">
             <div class="row">
@@ -84,49 +94,17 @@
                     </div>
                 </div>
             </div>
-            <br>
+        
+            <div class="row">
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="Digite seu email...">
+                        <button><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Remove a tela de carregamento após o carregamento da página
-            const loadingScreen = document.getElementById("loading-screen");
-            loadingScreen.classList.add("loaded");
-
-            // Animação de surgimento para todos os elementos
-            gsap.from(".body, .header, .hero, .servicos, .produto, .navbar, .logo, .nav-links a, .btn, .card, .card__article, .container, .row, .social, .footer, .links,", {
-                duration: 1.2,
-                opacity: 0,
-                y: 50,
-                stagger: 0.1,
-                ease: "power2.out"
-            });
-
-            // Animação para elementos ao rolar a página
-            gsap.utils.toArray(".servicos, .produto, .garantia-qualidade").forEach(section => {
-                gsap.from(section, {
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top 80%",
-                        end: "bottom 30%",
-                        scrub: true
-                    },
-                    opacity: 0,
-                    y: 50,
-                    duration: 1
-                });
-            });
-        });
-
-        window.addEventListener("scroll", () => {
-            const navbar = document.querySelector(".navbar");
-            if (window.scrollY > 50) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
-    </script>
+     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

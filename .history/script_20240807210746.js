@@ -102,16 +102,3 @@ window.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }, 1000);
 });
-
-window.addEventListener('DOMContentLoaded', function() {
-    var loginBtn = document.getElementById('login-btn');
-    loginBtn.addEventListener('click', function() {
-        window.location.href = 'login.html';
-    });
-
-    var tl = gsap.timeline();
-    tl.fromTo(".navbar", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
-    .fromTo(".logo img", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 1 }, "<")
-    .fromTo(".nav-links a", { opacity: 0, y: -20 }, { opacity: 1, y: 0, stagger: 0.1, duration: 1 }, "<")
-    .fromTo(".btn", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1 }, "<");
-});

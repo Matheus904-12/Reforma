@@ -49,6 +49,7 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("scrolled");
     }
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const slidePage = document.querySelector(".multi-step-registration-form .slide-page");
     const nextButtons = document.querySelectorAll(".multi-step-registration-form .next");
@@ -59,25 +60,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const bullet = document.querySelectorAll(".multi-step-registration-form .step .bullet");
     let current = 1;
 
-    nextButtons.forEach((btn, index) => {
+    nextButtons.forEach((btn) => {
         btn.addEventListener("click", function (event) {
             event.preventDefault();
-            slidePage.style.marginLeft = `-${index + 1}00%`;
-            bullet[index].classList.add("active");
-            progressCheck[index].classList.add("active");
-            progressText[index].classList.add("active");
-            current = index + 2;
+            slidePage.style.marginLeft = `-${current * 100}%`;
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
         });
     });
 
-    prevButtons.forEach((btn, index) => {
+    prevButtons.forEach((btn) => {
         btn.addEventListener("click", function (event) {
             event.preventDefault();
-            slidePage.style.marginLeft = `-${index}00%`;
-            bullet[index].classList.remove("active");
-            progressCheck[index].classList.remove("active");
-            progressText[index].classList.remove("active");
-            current = index + 1;
+            slidePage.style.marginLeft = `-${(current - 2) * 100}%`;
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
         });
     });
 
@@ -92,26 +93,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-window.addEventListener('DOMContentLoaded', function() {
-    var loadingScreen = document.getElementById('loading-screen');
-    setTimeout(function() {
-        loadingScreen.style.opacity = '0';
-        setTimeout(function() {
-            loadingScreen.style.display = 'none';
-        }, 500);
-    }, 1000);
-});
-
-window.addEventListener('DOMContentLoaded', function() {
-    var loginBtn = document.getElementById('login-btn');
-    loginBtn.addEventListener('click', function() {
-        window.location.href = 'login.html';
-    });
-
-    var tl = gsap.timeline();
-    tl.fromTo(".navbar", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
-    .fromTo(".logo img", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 1 }, "<")
-    .fromTo(".nav-links a", { opacity: 0, y: -20 }, { opacity: 1, y: 0, stagger: 0.1, duration: 1 }, "<")
-    .fromTo(".btn", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1 }, "<");
-});

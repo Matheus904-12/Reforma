@@ -134,18 +134,3 @@
 .multi-step-registration-form .field.btns button {
     width: 48%;
 }
-
-.multi-step-registration-form .step.active .check {
-    display: block;
-    background-color: #007bff;
-    border-radius: 50%;
-}
-
-.multi-step-registration-form .step.active .bullet {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.multi-step-registration-form .step.active p {
-    color: #007bff;
-}
