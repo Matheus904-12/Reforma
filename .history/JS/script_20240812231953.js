@@ -161,7 +161,7 @@ var validPaths = [
 ];
 
 // Se a página atual não estiver na lista de caminhos válidos e não for a própria página 404
-if (!validPaths.includes(currentPath) && currentPath !== '../ERROR/404.html') {
+if (!validPaths.includes(currentPath) && currentPath !== './ERROR/404.html') {
     window.location.href = '../ERROR/404.html';
 }
 });
