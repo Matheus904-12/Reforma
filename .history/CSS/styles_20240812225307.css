@@ -1,80 +1,87 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #fcfcfc;
 }
 
 header {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 50px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease-in-out;
-    margin: 20px 50px;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 55px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  margin: 20px 50px;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 5px 15px;
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 55px;
+  top: 0px;
 }
 
 .logo {
-    position: absolute;
-    left: 50px;
-    font-weight: bold;
+  position: absolute;
+  left: 50px;
+  font-weight: bold;
 }
 
 .logo img {
-  transform: scale(0.3); /* Reduz o tamanho para 80% */
+  transform: scale(0.3);
   transition: transform 0.3s ease-in-out;
   margin-left: -220px;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 15px;
-    border-radius: 15px;
-    position: relative; /* Necessário para posicionar o pseudo-elemento */
-    transition: color 0.3s; /* Transição para a cor do texto */
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 15px;
+  position: relative;
+  transition: color 0.3s;
 }
 
 .nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px; /* Altura da linha embaixo do texto */
-    background: #333; /* Cor da linha embaixo do texto */
-    transition: width 0.3s; /* Transição para o comprimento da linha */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s;
 }
 
 .nav-links a:hover::after {
-    width: 100%; /* Linha se expande para a largura total do link */
+  width: 100%;
 }
 
 .nav-links a:hover {
-    color: #333; /* Mantém a cor do texto ao passar o mouse */
+  color: #333;
 }
 
-
 .btn {
-    width: 140px;
+  width: 140px;
     height: 50px;
     background: linear-gradient(to top, #000000, #272727, #6d6d6d);
     color: #fff;
@@ -90,43 +97,44 @@ header {
     text-decoration: none; /* Para remover o sublinhado do link */
     display: flex;
     justify-content: center;
-    align-items: center;
+  transition: background 0.3s;
 }
 
 .btn span {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: top 0.5s;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
 }
 
 .btn-text-one {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .btn-text-two {
-    position: absolute;
-    width: 100%;
-    top: 150%;
-    left: 0;
-    transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .btn:hover .btn-text-one {
-    top: -100%;
+  top: -100%;
 }
 
 .btn:hover .btn-text-two {
-    top: 50%;
+  top: 50%;
 }
 
 .btn:active {
-    transform: translateY(1px); /* Efeito de afundar ao clicar */
+  transform: translateY(1px);
 }
+
 
 .hero {
     position: relative;
@@ -146,6 +154,12 @@ header {
 
 .servicos {
     padding: 100px;
+    
+}
+
+.servicos2 {
+  padding: 100px;
+  margin-top: -100px;
 }
 
 .servicos-header {
@@ -160,6 +174,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
+    margin-top: -90px;
 }
 
 .servicos h2 {
@@ -200,8 +215,9 @@ header {
 .card-image img {
     width: 257px;
     height: 205px;
-    border-radius: 10px;
+    border-radius: 25px;
     margin-right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
 }
 
 .card-content {
@@ -225,7 +241,7 @@ header {
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(82, 60%, 28%);
+  --first-color: #ff6600;
   --title-color: hsl(0, 0%, 15%);
   --text-color: hsl(0, 0%, 35%);
   --body-color: hsl(0, 0%, 95%);
@@ -260,7 +276,8 @@ header {
   place-items: center;
   margin-inline: 1.5rem;
   padding-block: 5rem;
-  margin-bottom: 155px,
+  margin-bottom: 155px;
+  margin-top: -150px;
 }
 
 .card__data h2 {
