@@ -6,6 +6,8 @@
     margin: 0 auto;
     padding: 20px;
     max-width: 900px;
+    box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
 }
 
 .multi-step-registration-form header {

@@ -529,14 +529,10 @@ footer {
   background: #000; /* Cor do "polegar" quando o mouse passa sobre ele */
 }
 
-/* Para Firefox */
-scrollbar-width: thin; /* Controla a largura da barra de rolagem */
-scrollbar-color: #888 #f1f1f1; /* Cor do polegar e da trilha */
-
 /* Exemplo de configuração para todo o corpo */
 body {
-    scrollbar-width: thin; /* Largura fina para a barra de rolagem */
-    scrollbar-color: #888 #f1f1f1; /* Cor do "polegar" e da trilha */
+  scrollbar-width: thin; /* Largura fina para a barra de rolagem */
+  scrollbar-color: #ff6600 #f1f1f1; /* Cor do "polegar" e da trilha */
 }
 
 /* Exemplo de configuração para um elemento específico */
